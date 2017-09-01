@@ -1,0 +1,1067 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.SqlServer.Management.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SqlServer.Management.Common.IReadOnlyCollection`1">
+            <summary>
+            Defines a read-only generic collection.
+            </summary>
+            <typeparam name="T">The type of the elements in the collection.</typeparam>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.IReadOnlyCollection`1.Count">
+            <summary>
+            Gets the number of items contained in the <c>IReadOnlyCollection</c>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2">
+            <summary>
+            Represents a generic read-only collection of key/value pairs.
+            </summary>
+            <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
+            <typeparam name="TValue">The type of values in the dictionary.</typeparam>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2.ContainsKey(`0)">
+            <summary>
+            Determines whether the <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/> contains an element 
+            with the specified key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/>.</param>
+            <returns><c>true</c> if the <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/> contains an 
+            element with the key; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2.TryGetValue(`0,`1@)">
+            <summary>
+            Gets the value associated with the specified key.
+            </summary>
+            <param name="key">The key of the value to get.</param>
+            <param name="value">When this method returns, the value associated with the specified key, 
+            if the key is found; otherwise, the default value for the type of the value parameter. 
+            This parameter is passed uninitialized.</param>
+            <returns><c>true</c> if the object that implements <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/>
+            contains an element with the specified key; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2.Item(`0)">
+            <summary>
+            Gets the value with the specified key.
+            </summary>
+            <param name="key">The key of the value to get.</param>
+            <returns>The value with the specified key.</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2.Keys">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.IEnumerable`1"/> containing the keys of the 
+            <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2.Values">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.IEnumerable`1"/> containing the values of the 
+            <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.IReadOnlyKeyedCollection`2">
+            <summary>
+            Defines a collection whose keys are embedded in the values.
+            </summary>
+            <typeparam name="TKey">The type of keys in the collection.</typeparam>
+            <typeparam name="TValue">The type of items in the collection.</typeparam>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.IReadOnlyKeyedCollection`2.ContainsKey(`0)">
+            <summary>
+            Determines whether the <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/> contains an element 
+            with the specified key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/>.</param>
+            <returns><c>true</c> if the <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/> contains an 
+            element with the key; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.IReadOnlyKeyedCollection`2.TryGetValue(`0,`1@)">
+            <summary>
+            Gets the value associated with the specified key.
+            </summary>
+            <param name="key">The key of the value to get.</param>
+            <param name="value">When this method returns, the value associated with the specified key, 
+            if the key is found; otherwise, the default value for the type of the value parameter. 
+            This parameter is passed uninitialized.</param>
+            <returns><c>true</c> if the object that implements <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/>
+            contains an element with the specified key; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.IReadOnlyKeyedCollection`2.Item(`0)">
+            <summary>
+            Gets the value with the specified key.
+            </summary>
+            <param name="key">The key of the value to get.</param>
+            <returns>The value with the specified key.</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1">
+            <summary>
+            Represents a strongly typed list of objects that can be accessed by index.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.IReadOnlyList`1.Item(System.Int32)">
+            <summary>
+            Gets the element at the specified index.
+            </summary>
+            <param name="index">The zero-based index of the element to get.</param>
+            <returns>The element at the specified index.</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2">
+            <summary>
+            A generic struct that only exposes the read-only interface of a dictionary.
+            </summary>
+            <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
+            <typeparam name="TValue">The type of values in the dictionary.</typeparam>
+            <remarks>
+            The <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2"/> struct explicitly implements 
+            <see cref="T:System.Collections.Generic.ICollection`1"/> in order to improve the <see cref="T:System.Collections.Generic.IEnumerable`1"/> extension
+            method performance. This is because many of these extension method first attempt to cast down
+            the <c>IEnumerable{T}</c> to either an <c>IList{T}</c> or <c>ICollection{T}</c>. This provides 
+            a faster code path than the general <c>IEnumerable{T}</c> code. Any mutating method on 
+            <c>IList{T}</c> interface needs to throw <see cref="T:System.InvalidOperationException"/>.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2.#ctor(System.Collections.Generic.IDictionary{`0,`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2"/> struct. It wraps the
+            specified <see cref="T:System.Collections.Generic.IDictionary`2"/> in a read-only interface.
+            </summary>
+            <param name="dictionary">A <see cref="T:System.Collections.Generic.IDictionary`2"/> object to be wrapped in read-only interface</param>
+            <remarks>If <paramref name="dictionary"/> is <c>null</c>, it is treated as an empty dictionary.</remarks>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2.op_Implicit(System.Collections.Generic.Dictionary{`0,`1})~Microsoft.SqlServer.Management.Common.ReadOnlyDictionary{`0,`1}">
+            <summary>
+            Implicit conversion from <see cref="T:System.Collections.Generic.Dictionary`2"/> to 
+            <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2"/>.
+            </summary>
+            <param name="dictionary">The <see cref="T:System.Collections.Generic.Dictionary`2"/> object to convert.</param>
+            <returns>A <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2"/> that wraps the specified dictionary.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2.op_Implicit(System.Collections.Generic.SortedList{`0,`1})~Microsoft.SqlServer.Management.Common.ReadOnlyDictionary{`0,`1}">
+            <summary>
+            Implicit conversion from <see cref="T:System.Collections.Generic.SortedList`2"/> to 
+            <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2"/>.
+            </summary>
+            <param name="sortedList">The <see cref="T:System.Collections.Generic.SortedList`2"/> object to convert.</param>
+            <returns>A <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2"/> that wraps the specified sorted list.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2.ContainsKey(`0)">
+            <summary>
+            Determines whether the dictionary contains an element with the specified key.
+            </summary>
+            <param name="key">The key to locate in the dictionary.</param>
+            <returns><c>true</c> if the dictionary contains an element with the specified key; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2.TryGetValue(`0,`1@)">
+            <summary>
+            Gets the value associated with the specified key.
+            </summary>
+            <param name="key">The key whose value to get.</param>
+            <param name="value">When this method returns, the value associated with the specified key, if the key is found; 
+            otherwise, the default value for the type of the value parameter. This parameter is passed uninitialized.</param>
+            <returns><c>true</c> if the dictionary contains an element with the specified key; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the dictionary.
+            </summary>
+            <returns>An enumerator that can be used to iterate through the list of key/value pairs.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the list of values in the dictionary.
+            </summary>
+            <returns>An <see cref="T:System.Collections.IEnumerator"/> that can be used to iterate through the list of values.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2.Equals(Microsoft.SqlServer.Management.Common.ReadOnlyDictionary{`0,`1})">
+            <summary>
+            Indicates whether the current <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2"/> is equal to 
+            another object of the same type.
+            </summary>
+            <param name="other">A <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2"/> to compare with this object.</param>
+            <returns><c>true</c> if the current object is equal to <paramref name="other"/>; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2"/>.
+            </summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:System.Object"/>; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2.GetHashCode">
+            <summary>
+            Serves as a hash function for a <c>ReadOnlyDictionary{TKey, TValue}</c> type.
+            </summary>
+            <returns>A hash code for the current <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2"/>.</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2.Item(`0)">
+            <summary>
+            Gets the element with the specified key.
+            </summary>
+            <param name="key">The key of the element to get.</param>
+            <returns>The element with the specified key.</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2.Keys">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.IEnumerable`1"/> containing the keys of the dictionary.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2.Values">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.IEnumerable`1"/> containing the values of the dictionary.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2.Count">
+            <summary>
+            Gets the number of elements contained in the dictionary.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary`2.Data">
+            <summary>
+            Gets the <see cref="T:System.Collections.Generic.IDictionary`2"/> object that this struct wraps in the 
+            read-only interface.
+            </summary>
+            <remarks>
+            Please note that since this is a struct, its parameter-less constructor will initialize
+            the value of the <c>dictionary</c> field to <c>null</c> and thus we here make sure to 
+            return an empty dictionary in such a case.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary">
+            <summary>
+            Provides a set of static methods for creating objects that implement <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary.Empty``2">
+            <summary>
+            Returns an empty <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/> that has the specified type argument.
+            </summary>
+            <typeparam name="TKey">The type of the keys of the returned generic <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/>.</typeparam>
+            <typeparam name="TValue">The type of the values of the returned generic <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/>.</typeparam>
+            <returns>An empty <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/>.</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary.DictionaryBase`2">
+            <summary>
+            Base class for classes that implement <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyDictionary`2"/> interface.
+            </summary>
+            <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
+            <typeparam name="TValue">The type of values in the dictionary.</typeparam>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReadOnlyDictionary.Dictionary0`2">
+            <summary>
+            Read-only dictionary with zero items.
+            </summary>
+            <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
+            <typeparam name="TValue">The type of values in the dictionary.</typeparam>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReadOnlyKeyedCollection">
+            <summary>
+            Provides a set of static methods for creating objects that implement <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyKeyedCollection`2"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyKeyedCollection.Empty``2">
+            <summary>
+            Returns an empty <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyKeyedCollection`2"/> that has the specified type argument.
+            </summary>
+            <typeparam name="TKey">The type of the keys of the returned generic <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyKeyedCollection`2"/>.</typeparam>
+            <typeparam name="TValue">The type of the values of the returned generic <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyKeyedCollection`2"/>.</typeparam>
+            <returns>An empty <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyKeyedCollection`2"/>.</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReadOnlyKeyedCollection.KeyedCollection0`2">
+            <summary>
+            Read-only keyed-collection with zero items.
+            </summary>
+            <typeparam name="TKey">The type of keys in the collection.</typeparam>
+            <typeparam name="TValue">The type of values in the collection.</typeparam>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1">
+            <summary>
+            A generic struct that exposes the read-only interface of a list while hides
+            its mutable interface.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+            <remarks>
+            The <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/> struct explicitly implements <see cref="T:System.Collections.Generic.IList`1"/> in order
+            to improve the <see cref="T:System.Collections.Generic.IEnumerable`1"/> extension method performance. This is because many
+            of these extension method first attempt to cast down the <c>IEnumerable{T}</c> to either
+            an <c>IList{T}</c> or <c>ICollection{T}</c>. This provides a faster code path than the general
+            <c>IEnumerable{T}</c> code. Any mutating method on <c>IList{T}</c> interface needs to throw
+            <see cref="T:System.InvalidOperationException"/>.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList`1.#ctor(System.Collections.Generic.IList{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/> struct that wraps a
+            specified <see cref="T:System.Collections.Generic.IList`1"/> in a read-only interface.
+            </summary>
+            <param name="list">A <see cref="T:System.Collections.Generic.IList`1"/> object to be wrapped in read-only interface</param>
+            <remarks>If <paramref name="list"/> is <c>null</c>, it is treated as an empty list.</remarks>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList`1.op_Implicit(`0[])~Microsoft.SqlServer.Management.Common.ReadOnlyList{`0}">
+            <summary>
+            Implicit conversion from <see cref="T:System.Array"/> to <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/>.
+            </summary>
+            <param name="array">The <see cref="T:System.Array"/> object to convert.</param>
+            <returns>A <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/> that wraps the specified array.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList`1.op_Implicit(System.Collections.Generic.List{`0})~Microsoft.SqlServer.Management.Common.ReadOnlyList{`0}">
+            <summary>
+            Implicit conversion from <see cref="T:System.Collections.Generic.List`1"/> to <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/>.
+            </summary>
+            <param name="list">The <see cref="T:System.Collections.Generic.List`1"/> object to convert.</param>
+            <returns>A <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/> that wraps the specified list.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the list.
+            </summary>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerator`1"/> that can be used to iterate through the list.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the list.
+            </summary>
+            <returns>An <see cref="T:System.Collections.IEnumerator"/> that can be used to iterate through the list.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList`1.Equals(Microsoft.SqlServer.Management.Common.ReadOnlyList{`0})">
+            <summary>
+            Indicates whether the current <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/> is equal to another object of 
+            the same type.
+            </summary>
+            <param name="other">A <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/> to compare with this object.</param>
+            <returns><c>true</c> if the current object is equal to <paramref name="other"/>; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList`1.Contains(`0)">
+            <summary>
+            Determines whether the <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/> contains a specific value.
+            </summary>
+            <param name="item">The object to locate in the list.</param>
+            <returns><c>true</c> if item is found in the list; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList`1.CopyTo(`0[],System.Int32)">
+            <summary>
+            Copies the elements of the <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/> to an <see cref="T:System.Array"/>, 
+            starting at a particular <see cref="T:System.Array"/> index.
+            </summary>
+            <param name="array">
+            The one-dimensional <see cref="T:System.Array"/> that is the destination of the elements
+            copied from <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/>.
+            </param>
+            <param name="arrayIndex">The zero-based index in array at which copying begins.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList`1.IndexOf(`0)">
+            <summary>
+            Determines the index of a specific item in the <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/>.
+            </summary>
+            <param name="item">The object to locate in the <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/>.</param>
+            <returns>The index of item if found in the list; otherwise, -1.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList`1.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/>.
+            </summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:System.Object"/>; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList`1.GetHashCode">
+            <summary>
+            Serves as a hash function for a <c>ReadOnlyList{T}</c> type.
+            </summary>
+            <returns>A hash code for the current <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/>.</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReadOnlyList`1.Item(System.Int32)">
+            <summary>
+            Gets the element at the specified index.
+            </summary>
+            <param name="index">The zero-based index of the element to get.</param>
+            <returns>The element at the specified index.</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReadOnlyList`1.Count">
+            <summary>
+            Gets the number of elements contained in the <see cref="T:Microsoft.SqlServer.Management.Common.ReadOnlyList`1"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReadOnlyList`1.Data">
+            <summary>
+            Gets the <see cref="T:System.Collections.Generic.IList`1"/> object that this struct wraps in the read-only interface.
+            </summary>
+            <remarks>
+            Please note that since this is a struct, its parameter-less constructor will initialize
+            the value of the <c>list</c> field to <c>null</c> and thus we here make sure to return
+            an empty list in such a case.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReadOnlyList">
+            <summary>
+            Provides a set of static methods for creating objects that implement <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList.Empty``1">
+            <summary>
+            Returns an empty <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> that has the specified type argument.
+            </summary>
+            <typeparam name="T">The type to assign to the type parameter of the returned generic <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/>.</typeparam>
+            <returns>An empty <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> whose type argument is <typeparamref name="T"/>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList.Create``1(``0)">
+            <summary>
+            Creates and returns a new <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> that contains a specified item.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+            <param name="item">The single item in the read-only list.</param>
+            <returns>An <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> that contains the specified item.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList.Create``1(``0,``0)">
+            <summary>
+            Creates and returns a new <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> that contains two specified items.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+            <param name="item1">The first item in the read-only list.</param>
+            <param name="item2">The second item in the read-only list.</param>
+            <returns>An <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> which contains the specified two items.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList.Create``1(``0,``0,``0)">
+            <summary>
+            Creates and returns a new <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> that contains three specified items.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+            <param name="item1">The first item in the read-only list.</param>
+            <param name="item2">The second item in the read-only list.</param>
+            <param name="item3">The third item in the read-only list.</param>
+            <returns>An <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> which contains the specified three items.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList.Create``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Creates and returns a new <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> that contains the items in a
+            specified <see cref="T:System.Collections.Generic.IList`1"/>.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+            <param name="items">The <see cref="T:System.Collections.Generic.IList`1"/> that contains the items in the read-only list to be created.</param>
+            <returns>An <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> which contains the items in the specified <see cref="T:System.Collections.Generic.IList`1"/>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList.Create``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Creates and returns a new <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> that contains the items in a
+            specified <see cref="T:System.Collections.Generic.IEnumerable`1"/>.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+            <param name="items">The <see cref="T:System.Collections.Generic.IEnumerable`1"/> that contains the items in the read-only list to be created.</param>
+            <returns>An <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> which contains the items in the specified <see cref="T:System.Collections.Generic.IEnumerable`1"/>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList.CopyTo``1(Microsoft.SqlServer.Management.Common.IReadOnlyList{``0},``0[])">
+            <summary>
+            Copies the entire <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> to a compatible one-dimensional array, 
+            starting at the beginning of the target array. 
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+            <param name="list">The <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> to copy its items to the array.</param>
+            <param name="array">The one-dimensional <c>Array</c> that is the destination of the elements copied from this list.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList.CopyTo``1(Microsoft.SqlServer.Management.Common.IReadOnlyList{``0},``0[],System.Int32)">
+            <summary>
+            Copies the entire <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> to a compatible one-dimensional array, 
+            starting at the specified index of the target array. 
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+            <param name="list">The <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> to copy its items to the array.</param>
+            <param name="array">The one-dimensional <c>Array</c> that is the destination of the elements copied from this list.</param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array"/> at which copying begins.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList.Equals``1(Microsoft.SqlServer.Management.Common.IReadOnlyList{``0},Microsoft.SqlServer.Management.Common.IReadOnlyList{``0})">
+            <summary>
+            Determines whether a <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> equals to another <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/>
+            by using the default equality comparer to compare corresponding items.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+            <param name="list">The <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> to perform the equality check.</param>
+            <param name="other">The <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> to compare to.</param>
+            <returns><c>true</c> if both lists are equal; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList.Equals``1(Microsoft.SqlServer.Management.Common.IReadOnlyList{``0},Microsoft.SqlServer.Management.Common.IReadOnlyList{``0},System.Collections.Generic.IEqualityComparer{``0})">
+            <summary>
+            Determines whether a <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> equals to another <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/>
+            by using the specified equality comparer to compare corresponding items in the lists.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+            <param name="list">The <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> to perform the equality check.</param>
+            <param name="other">The <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> to compare to.</param>
+            <param name="comparer">An <see cref="T:System.Collections.Generic.IEqualityComparer`1"/> to be used to compare list items.</param>
+            <returns><c>true</c> if both lists are equal; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList.IndexOf``1(Microsoft.SqlServer.Management.Common.IReadOnlyList{``0},``0)">
+            <summary>
+            Returns the zero-based index of the first occurrence of a value in the List. 
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+            <param name="list">The <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> to search in.</param>
+            <param name="item">The item to locate in the <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/>.</param>
+            <returns>The zero-based index of the first occurrence of item within the entire List, if found; otherwise, -1.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReadOnlyList.IndexOf``1(Microsoft.SqlServer.Management.Common.IReadOnlyList{``0},``0,System.Collections.Generic.IEqualityComparer{``0})">
+            <summary>
+            Returns the zero-based index of the first occurrence of a value in the List using the 
+            specified equality comparer to compare list items.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+            <param name="list">The <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> to search in.</param>
+            <param name="item">The item to locate in the <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/>.</param>
+            <param name="comparer">An <see cref="T:System.Collections.Generic.IEqualityComparer`1"/> to be used to compare list items.</param>
+            <returns>The zero-based index of the first occurrence of item within the entire List, if found; otherwise, -1.</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReadOnlyList.ListBase`1">
+            <summary>
+            Base class for classes that implement <see cref="T:Microsoft.SqlServer.Management.Common.IReadOnlyList`1"/> interface.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReadOnlyList.List0`1">
+            <summary>
+            Read-only list with no items.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReadOnlyList.List1`1">
+            <summary>
+            Read-only list which contains exactly 1 item.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReadOnlyList.List2`1">
+            <summary>
+            Read-only list which contains exactly 2 items.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReadOnlyList.List3`1">
+            <summary>
+            Read-only list which contains exactly 3 items.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReadOnlyList.ListN`1">
+            <summary>
+            Read-only list that contains arbitrary number of items.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReliableSqlConnection">
+            <summary>
+            Provides a reliable way of opening connections to and executing commands
+            taking into account potential network unreliability and a requirement for connection retry.
+            </summary>
+            <summary>
+            Provides a reliable way of opening connections to and executing commands
+            taking into account potential network unreliability and a requirement for connection retry.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.op_Implicit(Microsoft.SqlServer.Management.Common.ReliableSqlConnection)~System.Data.Common.DbConnection">
+            <summary>
+            Implicit conversion from <see cref="T:Microsoft.SqlServer.Management.Common.ReliableSqlConnection"/> to <see cref="T:System.Data.Common.DbConnection"/>.
+            </summary>
+            <param name="reliableConnection">A <see cref="T:Microsoft.SqlServer.Management.Common.ReliableSqlConnection"/> object to convert.</param>
+            <returns>A <see cref="T:System.Data.Common.DbConnection"/> that wraps the specified list.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.CreateUninitializedReliableCommand">
+            <summary>
+            Creates a <see cref="T:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand"/> with Connection property not set.
+            </summary>
+            <returns>Uninitialized instance of <see cref="T:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand"/> class.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.#ctor">
+            <summary>
+            Initializes a new instance of the ReliableSqlConnection class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ReliableSqlConnection class with a given connection string. Uses the default
+            retry policy for connections and commands unless retry settings are provided in the connection string.
+            </summary>
+            <param name="connectionString">The connection string used to open the SQL Azure database.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.#ctor(System.String,Microsoft.SqlServer.Management.Common.RetryPolicy)">
+            <summary>
+            Initializes a new instance of the ReliableSqlConnection class with a given connection string
+            and a policy defining whether to retry a request if the connection fails to be opened or a command
+            fails to be successfully executed.
+            </summary>
+            <param name="connectionString">The connection string used to open the SQL Azure database.</param>
+            <param name="retryPolicy">The retry policy defining whether to retry a request if a connection or a command fails.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.#ctor(System.String,Microsoft.SqlServer.Management.Common.RetryPolicy,Microsoft.SqlServer.Management.Common.RetryPolicy)">
+            <summary>
+            Initializes a new instance of the ReliableSqlConnection class with a given connection string
+            and a policy defining whether to retry a request if the connection fails to be opened or a command
+            fails to be successfully executed.
+            </summary>
+            <param name="connectionString">The connection string used to open the SQL Azure database.</param>
+            <param name="connectionRetryPolicy">The retry policy defining whether to retry a request if a connection fails to be established.</param>
+            <param name="commandRetryPolicy">The retry policy defining whether to retry a request if a command fails to be executed.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.BeginTransaction(System.Data.IsolationLevel)">
+            <summary>
+            Begins a database transaction with the specified System.Data.IsolationLevel value.
+            </summary>
+            <param name="level">One of the System.Data.IsolationLevel values.</param>
+            <returns>An object representing the new transaction.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.BeginTransaction">
+            <summary>
+            Begins a database transaction.
+            </summary>
+            <returns>An object representing the new transaction.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ChangeDatabase(System.String)">
+            <summary>
+            Changes the current database for an open Connection object.
+            </summary>
+            <param name="databaseName">The name of the database to use in place of the current database.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.Open">
+            <summary>
+            Opens a database connection with the settings specified by the ConnectionString
+            property of the provider-specific Connection object.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.Close">
+            <summary>
+            Closes the connection to the database.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.CreateCommand">
+            <summary>
+            Creates and returns an object implementing the IDbCommand interface which is associated 
+            with the underlying SqlConnection.
+            </summary>
+            <returns>A <see cref="T:System.Data.IDbCommand"/> object.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.AddInfoMessageHandler(System.Data.SqlClient.SqlInfoMessageEventHandler)">
+            <summary>
+            Adds an info message event listener.
+            </summary>
+            <param name="handler">An info message event listener.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.RemoveInfoMessageHandler(System.Data.SqlClient.SqlInfoMessageEventHandler)">
+            <summary>
+            Removes an info message event listener.
+            </summary>
+            <param name="handler">An info message event listener.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ClearPool">
+            <summary>
+            Clears underlying connection pool.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or
+             resetting managed and unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.Dispose(System.Boolean)">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or
+             resetting managed and unmanaged resources.
+            </summary>
+            <param name="disposing">A flag indicating that managed resources must be released.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ExecuteAndTraceTransferOnException(Microsoft.SqlServer.Management.Common.RetryPolicy,System.Action)">
+            <summary>
+            Executes <paramref name="action"/>. If the Action throws an exception, this method will emit the session trace ID 
+            in a Transfer event before rethrowing the exception. The session trace ID may be required to identify the root 
+            cause of the failure on the back end. 
+            </summary>
+            <param name="retryPolicy">The <see cref="T:Microsoft.SqlServer.Management.Common.RetryPolicy"/> to use to execute <paramref name="action"/></param>
+            <param name="action">A delegate representating an executable action that does not return results</param>
+            <remarks>This is intended to defer emitting the Transfer event until we know that the action failed, which is the 
+            situation when we are most likely to need the session trace ID / activity ID.</remarks>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ExecuteAndTraceTransferOnException``1(Microsoft.SqlServer.Management.Common.RetryPolicy,System.Func{``0})">
+            <summary>
+            Executes <paramref name="func"/>. If the Func throws an exception, this method will emit the session trace ID in 
+            a Transfer event. The session trace ID may be required to identify the root cause of the failure on the back end. 
+            </summary>
+            <typeparam name="R">The type of result expected from the executable action.</typeparam>
+            <param name="retryPolicy">The <see cref="T:Microsoft.SqlServer.Management.Common.RetryPolicy"/> to use to execute <paramref name="func"/></param>
+            <param name="func">A delegate representing the executable action which returns the result of type R.</param>
+            <returns>An object of type <typeparamref name="R"/></returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.OpenConnection">
+            <summary>
+            Opens a database connection with the settings specified by the ConnectionString and ConnectionRetryPolicy properties.
+            </summary>
+            <returns>An object representing the open connection.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.OpenConnection(Microsoft.SqlServer.Management.Common.RetryPolicy)">
+            <summary>
+            Opens a database connection with the settings specified by the ConnectionString and specified retry policy.
+            </summary>
+            <param name="retryPolicy">The retry policy defining whether to retry a request if the connection fails to be opened.</param>
+            <returns>An object representing the open connection.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.GetSessionTraceId">
+            <summary>
+            Retrieves the session trace ID (CONTEXT_INFO) of the underlying SQL connection
+            </summary>
+            <remarks>Physical SQL connections are pooled by default. When a "soft" connect removes a connection from the pool, it gets reset 
+            by sp_reset_connection to remove any state left over from the previous user of that pooled connection. But context_info, which 
+            is Gateway's session trace ID (sometimes just called "activity ID"), is not changed by sp_reset_connection. That means if you 
+            are following a trace trail and you get to the transfer event emitted by this function, you can do another search for the child 
+            session trace ID (activity ID) to see what happened on that SQL connection. But you should expect to see some events with the 
+            same session trace ID before and after the relevant events. These are from unrelated operations that just happened to use the 
+            same pooled physical connection.</remarks>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.CreateSqlCommand">
+            <summary>
+            Creates and returns a SqlCommand object associated with the underlying SqlConnection.
+            </summary>
+            <returns>A <see cref="T:System.Data.SqlClient.SqlCommand"/> object.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.CreateReliableCommand">
+            <summary>
+            Creates and returns a ReliableSqlCommand object associated 
+            with the underlying SqlConnection.
+            </summary>
+            <returns>A <see cref="T:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand"/> object.</returns>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ConnectionString">
+            <summary>
+            Gets or sets the connection string for opening a connection to the SQL Azure database.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ConnectionRetryPolicy">
+            <summary>
+            Gets the policy which decides whether to retry a connection request, based on how many 
+            times the request has been made and the reason for the last failure. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.CommandRetryPolicy">
+            <summary>
+            Gets the policy which decides whether to retry a command, based on how many 
+            times the request has been made and the reason for the last failure. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ConnectionTimeout">
+            <summary>
+            Gets the time to wait while trying to establish a connection before terminating
+            the attempt and generating an error.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.Database">
+            <summary>
+            Gets the name of the current database or the database to be used after a
+            connection is opened.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.State">
+            <summary>
+            Gets the current state of the connection.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand">
+            <summary>
+            Provides a reliable way of executing T-SQL commands, taking into account
+            potential network unreliability and a requirement to retry the command.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.op_Implicit(Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand)~System.Data.Common.DbCommand">
+            <summary>
+            Provides a conversion from ReliableSqlCommand to a DbCommand. 
+            </summary>
+            <param name="reliableCommand">A command to convert</param>
+            <returns>The converted DbCommand object</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.Dispose">
+            <summary>
+            Provides a way to safely dispose this object.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.Cancel">
+            <summary>
+            Attempts to cancels the execution of an <see cref="T:System.Data.IDbCommand"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.CreateParameter">
+            <summary>
+            Creates a new instance of an <see cref="T:System.Data.IDbDataParameter"/> object.
+            </summary>
+            <returns>An <see cref="T:System.Data.IDbDataParameter"/> object.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.ExecuteNonQuery">
+            <summary>
+            Executes an SQL statement against the Connection object of a .NET Framework
+            data provider, and returns the number of rows affected.
+            </summary>
+            <returns>The number of rows affected.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.ExecuteReader">
+            <summary>
+            Executes the <see cref="P:System.Data.IDbCommand.CommandText"/> against the <see cref="P:System.Data.IDbCommand.Connection"/>
+            and builds an <see cref="T:System.Data.IDataReader"/>.
+            </summary>
+            <returns>An <see cref="T:System.Data.IDataReader"/> object.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.ExecuteReader(System.Data.CommandBehavior)">
+            <summary>
+            Executes the <see cref="P:System.Data.IDbCommand.CommandText"/> against the <see cref="P:System.Data.IDbCommand.Connection"/>
+            and builds an <see cref="T:System.Data.IDataReader"/> using one of the <see cref="T:System.Data.CommandBehavior"/> values.
+            </summary>
+            <param name="behavior">One of the <see cref="T:System.Data.CommandBehavior"/> values.</param>
+            <returns>An <see cref="T:System.Data.IDataReader"/> object.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.ExecuteScalar">
+            <summary>
+            Executes the query, and returns the first column of the first row in the
+            resultset returned by the query. Extra columns or rows are ignored.
+            </summary>
+            <returns>The first column of the first row in the resultset.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.Prepare">
+            <summary>
+            Creates a prepared (or compiled) version of the command on the data source.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.SetStatementCompleted(System.Data.StatementCompletedEventHandler)">
+            <summary>
+            Provides a way to set an event handler for a StatementCompleted event.
+            </summary>
+            <param name="handler">A handler delegate to be invoked when StatementCompleted event fires.</param>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.CommandText">
+            <summary>
+            Gets or sets the text command to run against the data source.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.CommandTimeout">
+            <summary>
+            Gets or sets the wait time before terminating the attempt to execute a command and generating an error.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.CommandType">
+            <summary>
+            Gets or sets a value that specifies how the <see cref="P:System.Data.Common.DbCommand.CommandText"/> property is interpreted.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.Connection">
+            <summary>
+            Gets or sets the <see cref="T:System.Data.Common.DbConnection"/> used by this <see cref="T:System.Data.Common.DbCommand"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.Parameters">
+            <summary>
+            Gets the <see cref="T:System.Data.IDataParameterCollection"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.Transaction">
+            <summary>
+            Gets or sets the transaction within which the Command object of a .NET Framework data provider executes.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.ReliableSqlConnection.ReliableSqlCommand.UpdatedRowSource">
+            <summary>
+            Gets or sets how command results are applied to the System.Data.DataRow when
+            used by the System.Data.IDataAdapter.Update(System.Data.DataSet) method of
+            a <see cref="T:System.Data.Common.DbDataAdapter"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.RetryLimitExceededException">
+            <summary>
+            The special type of exception that provides managed exit from a retry loop. The user code can use this
+            exception to notify the retry policy that no further retry attempts are required.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.RetryLimitExceededException.#ctor">
+            <summary>
+            Initializes a new instance of the RetryLimitExceededException class with a default error message.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.RetryLimitExceededException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the RetryLimitExceededException class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.RetryLimitExceededException.#ctor(System.Exception)">
+            <summary>
+            Initializes a new instance of the RetryLimitExceededException class with a reference to the inner exception
+            that is the cause of this exception.
+            </summary>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.ITransientErrorDetectionStrategy">
+            <summary>
+            Checks whether or not the specified exception belongs to a category of failures that can be compensated by a retry.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.ITransientErrorDetectionStrategy.IsTransient(System.Exception)">
+            <summary>
+            Checks whether or not the specified exception belongs to a category of failures that can be compensated by a retry.
+            </summary>
+            <param name="ex">The exception object.</param>
+            <returns>A boolean indicating whether or not the specified exception belongs to a category of retryable errors.</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.RetryCallbackDelegate">
+            <summary>
+            Defines a callback delegate which will be invoked whenever a retry condition is encountered.
+            </summary>
+            <param name="currentRetryCount">The current retry attempt count.</param>
+            <param name="lastException">The exception which caused the retry conditions to occur.</param>
+            <param name="delay">The delay indicating how long the current thread will be suspended for before the next iteration will be invoked.</param>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.RetryPolicy">
+            <summary>
+            Implements a policy defining and implementing the retry mechanism for unreliable actions.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.Common.RetryPolicy.DefaultRetryCount">
+            <summary>
+            The default number of retry attempts.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.Common.RetryPolicy.DefaultRetryInterval">
+            <summary>
+            The default amount of time defining an interval between retries.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SqlServer.Management.Common.RetryPolicy.NoRetry">
+            <summary>
+            Policy that does no retries, it just invokes action exactly once.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.RetryPolicy.ExecuteAction(System.Action)">
+            <summary>
+            Repetitively executes the specified action while it satisfies the current retry policy.
+            </summary>
+            <param name="action">A delegate representing the executable action which doesn't return any results.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.RetryPolicy.ExecuteAction``1(System.Func{``0})">
+            <summary>
+            Repetitively executes the specified action while it satisfies the current retry policy.
+            </summary>
+            <typeparam name="T">The type of result expected from the executable action.</typeparam>
+            <param name="func">A delegate representing the executable action which returns the result of type T.</param>
+            <returns>The result from the action.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.RetryPolicy.CreateDefaultSqlConnectionRetryPolicy">
+            <summary>
+            Creates and returns a default <see cref="T:System.Data.SqlClient.SqlConnection"/> Retry Policy.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.SqlServer.Management.Common.RetryPolicy"/> class.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.RetryPolicy.CreateDefaultSqlCommandRetryPolicy">
+            <summary>
+            Creates and returns a default <see cref="T:System.Data.SqlClient.SqlCommand"/> Retry Policy.
+            </summary>
+            <returns>An instance of <see cref="T:Microsoft.SqlServer.Management.Common.RetryPolicy"/> class.</returns>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.RetryPolicy.OnRetryOccurred(System.Int32,System.Exception,System.TimeSpan)">
+            <summary>
+            Notifies the subscribers whenever a retry condition is encountered.
+            </summary>
+            <param name="retryCount">The current retry attempt count.</param>
+            <param name="lastError">The exception which caused the retry conditions to occur.</param>
+            <param name="delay">The delay indicating how long the current thread will be suspended for before the next iteration will be invoked.</param>
+        </member>
+        <member name="E:Microsoft.SqlServer.Management.Common.RetryPolicy.RetryOccurred">
+            <summary>
+            An instance of a callback delegate which will be invoked whenever a retry condition is encountered.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SqlServer.Management.Common.RetryPolicy.FastFirstRetry">
+            <summary>
+            Gets or sets a value indicating whether or not the very first retry attempt will be made immediately
+            whereas the subsequent retries will remain subject to retry interval.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.RetryPolicy.TransientErrorIgnoreStrategy">
+            <summary>
+            Implements a strategy that ignores any transient errors.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.RetryPolicy.TRetryPolicy`1">
+            <summary>
+            Implements a policy defining and implementing the retry mechanism for unreliable actions.
+            </summary>
+            <typeparam name="T">Type of Retry strategy.</typeparam>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.RetryPolicy.TRetryPolicy`1.#ctor">
+            <summary>
+            Prevents a default instance of the TRetryPolicy class from being created.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.RetryPolicy.TRetryPolicy`1.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the TRetryPolicy class with the specified number of retry attempts and default fixed time interval between retries.
+            </summary>
+            <param name="retryCount">The number of retry attempts.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.RetryPolicy.TRetryPolicy`1.#ctor(System.Int32,System.TimeSpan)">
+            <summary>
+            Initializes a new instance of the TRetryPolicy class with the specified number of retry attempts and time interval between retries.
+            </summary>
+            <param name="retryCount">The number of retry attempts.</param>
+            <param name="intervalBetweenRetries">The interval between retries.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.RetryPolicy.TRetryPolicy`1.#ctor(System.Int32,System.TimeSpan,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Initializes a new instance of the TRetryPolicy class with the specified number of retry attempts and backoff parameters for calculating the exponential delay between retries.
+            </summary>
+            <param name="retryCount">The number of retry attempts.</param>
+            <param name="minBackoff">The minimum backoff time.</param>
+            <param name="maxBackoff">The maximum backoff time.</param>
+            <param name="deltaBackoff">The time value which will be used for calculating a random delta in the exponential delay between retries.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.RetryPolicy.TRetryPolicy`1.#ctor(System.Int32,System.TimeSpan,System.TimeSpan)">
+            <summary>
+            Initializes a new instance of the TRetryPolicy class with the specified number of retry attempts and parameters defining the progressive delay between retries.
+            </summary>
+            <param name="retryCount">The number of retry attempts.</param>
+            <param name="initialInterval">The initial interval which will apply for the first retry.</param>
+            <param name="increment">The incremental time value which will be used for calculating the progressive delay between retries.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.RetryPolicy.TRetryPolicy`1.ExecuteAction(System.Action)">
+            <summary>
+            Repetitively executes the specified action while it satisfies the current retry policy.
+            </summary>
+            <param name="action">A delegate representing the executable action which doesn't return any results.</param>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.RetryPolicy.TRetryPolicy`1.ExecuteAction``1(System.Func{``0})">
+            <summary>
+            Repetitively executes the specified action while it satisfies the current retry policy.
+            </summary>
+            <typeparam name="R">The type of result expected from the executable action.</typeparam>
+            <param name="func">A delegate representing the executable action which returns the result of type R.</param>
+            <returns>The result from the action.</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.RetryPolicy.TRetryPolicy`1.ShouldRetry">
+            <summary>
+            Signals whether a new retry attempt should be after given Exception is received.
+            </summary>
+            <param name="retryCount">Current count of attempted retries.</param>
+            <param name="lastException">Exception received after the last attempt.</param>
+            <param name="delay">Time to delay before the next attempt.</param>
+            <returns>True if Retry should be attempted.</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.SqlAzureTransientErrorDetectionStrategy">
+            <summary>
+            Transient Error Detection Strategy for SqlAzure.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SqlServer.Management.Common.SqlAzureTransientErrorDetectionStrategy.IsTransient(System.Exception)">
+            <summary>
+            Checks whether or not the specified exception belongs to a category of failures that can be compensated by a retry.
+            </summary>
+            <param name="ex">The exception object.</param>
+            <returns>A boolean indicating whether or not the specified exception belongs to a category of retryable errors.</returns>
+        </member>
+        <member name="T:Microsoft.SqlServer.Management.Common.TraceContext`1">
+            <summary>
+            Generic class which provides a singleton <see cref="T:Microsoft.SqlServer.Diagnostics.STrace.TraceContext"/> object for
+            each specified type parameter.
+            </summary>
+            <typeparam name="T">The type that identifies the trace context singleton instance.</typeparam>
+        </member>
+    </members>
+</doc>
