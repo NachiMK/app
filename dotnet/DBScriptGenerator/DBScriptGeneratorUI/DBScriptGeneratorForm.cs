@@ -134,9 +134,9 @@ namespace DBScriptGeneratorUI
         private void ResetForm()
         {
             this.txtOutputPath.Text = string.Empty;
-            this.txtServerName.Text = "Prod1_DB";
+            this.txtServerName.Text = "Prod1_DBClust";
             this.InitializeLstBoxDatabases();
-            this.txtOutputPath.Text = @"C:\Users\NachiM\Documents\DBScripts\";
+            this.txtOutputPath.Text = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             this.rtbResults.Text = string.Empty;
             InitializeCheckObjectsToScript();
         }
@@ -291,6 +291,24 @@ namespace DBScriptGeneratorUI
         {
             //this.GenerateTransferScripts();
             MessageBox.Show("This is same as Generate Script.");
+        }
+
+        private void btnUnCheckScriptOptions_Click(object sender, EventArgs e)
+        {
+            CheckUnCheckScriptOptions(false);
+        }
+
+        private void btnCheckScriptOptions_Click(object sender, EventArgs e)
+        {
+            CheckUnCheckScriptOptions();
+        }
+
+        private void CheckUnCheckScriptOptions(bool Check = true)
+        {
+            for (int i = 0; i < chkObjectsToScript.Items.Count; i++)
+            {
+                chkObjectsToScript.SetItemChecked(i, Check);
+            }
         }
     }
 }
