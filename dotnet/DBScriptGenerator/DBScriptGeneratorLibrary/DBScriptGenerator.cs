@@ -14,7 +14,7 @@ namespace DBScriptGeneratorLibrary
         public static List<string> AllowedListOfSQLObjectsForScripting()
         {
             List<string> retList = new List<string>(10);
-            retList.Add("Database");
+            retList.Add("Database Only");
             retList.Add("Assemblies");
             retList.Add("Schemas");
             retList.Add("Types");
@@ -395,7 +395,7 @@ namespace DBScriptGeneratorLibrary
             transfer.CopyAllPartitionFunctions = false;
             transfer.CopyAllPartitionSchemes = false;
             transfer.CopyAllPlanGuides = false;
-            transfer.CopyAllRoles = true;
+            transfer.CopyAllRoles = false;
             transfer.CopyAllSchemas = this.IncludeSchemas;
             transfer.CopyAllUserDefinedTypes = this.IncludeTypes;
             transfer.CopyAllUserDefinedDataTypes = this.IncludeTypes;
@@ -499,7 +499,7 @@ namespace DBScriptGeneratorLibrary
 
         private static void EnableAndChangePassword(string fileName)
         {
-            File.WriteAllText(fileName, System.Text.RegularExpressions.Regex.Replace(File.ReadAllText(fileName), "WITH PASSWORD=N'.*'", "WITH PASSWORD=N'test1235'"));
+            File.WriteAllText(fileName, System.Text.RegularExpressions.Regex.Replace(File.ReadAllText(fileName), "WITH PASSWORD=N'.*'", "WITH PASSWORD=N'T3st1235'"));
             File.WriteAllText(fileName, System.Text.RegularExpressions.Regex.Replace(File.ReadAllText(fileName), "] DISABLE", "] ENABLE"));
         }
 
@@ -602,6 +602,13 @@ namespace DBScriptGeneratorLibrary
             scr.Script(lstUsers.ToArray());
         }
 
+        private void ScriptDBRoles(Database db, Scripter scr)
+        {
+            DatabaseRole[] dbRoles = new DatabaseRole[db.Roles.Count];
+            db.Roles.CopyTo(dbRoles, 0);
+            scr.Script(dbRoles);
+        }
+
         private static List<User> GetSQLUsers(Database db)
         {
             List<User> lstUsers = new List<User>(1);
@@ -635,14 +642,16 @@ namespace DBScriptGeneratorLibrary
                     scr.Options = options;
                     
                     ScriptDatabaseUsers(db, scr);
+                    scr.Options.AppendToFile = true;
+                    ScriptDBRoles(db, scr);
                 }
 
                 List<User> lstUsers = GetSQLUsers(db);
                 strUserPermissions.AppendLine("");
                 foreach (User u in lstUsers)
                 {
-                    strUserPermissions.AppendLine(ScriptRoles(u));
-                    strUserPermissions.Append(ScriptDBPermissions(u, db));
+                    strUserPermissions.AppendLine(ScriptUserRoles(u));
+                    strUserPermissions.Append(ScriptUserPermissions(u, db));
                     strUserPermissions.AppendLine(ScriptObjectLevelPermissions(u, db));
                 }
 
@@ -674,7 +683,7 @@ namespace DBScriptGeneratorLibrary
             return sbObjPerm.ToString();
         }
 
-        private string ScriptDBPermissions(User u, Database db)
+        private string ScriptUserPermissions(User u, Database db)
         {
             StringBuilder sbDBPermissions = new StringBuilder(100);
             sbDBPermissions.AppendLine("-- [--DB LEVEL PERMISSIONS --] --");
@@ -687,7 +696,7 @@ namespace DBScriptGeneratorLibrary
             return sbDBPermissions.ToString();
         }
 
-        private string ScriptRoles(User u)
+        private string ScriptUserRoles(User u)
         {
             string strRoleScript = "EXEC sp_addrolemember @rolename = '<@role>', @membername = '<@User>';";
             StringBuilder sbRoleScript = new StringBuilder(100);
@@ -708,7 +717,7 @@ namespace DBScriptGeneratorLibrary
             {
                 strRetval = "[" + strToQuote + "]" + (includeObjectSeparator ? "." : "");
             }
-            return strToQuote;
+            return strRetval;
         }
 
         private void WriteStringToFile(string dbName, string outputFilePath, string script, bool IncludeDBContext = true)
@@ -812,7 +821,7 @@ namespace DBScriptGeneratorLibrary
         {
             get
             {
-                return IncludeObjectInScript("Database");
+                return IncludeObjectInScript("Database Only");
             }
         }
 
