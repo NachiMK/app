@@ -1,0 +1,12 @@
+﻿{
+  "RestoreBackupsFromPath": "\\\\lpvmdata\\WebDevData\\Data\\NachiM",
+  "DatabasesToRestore": [
+    "Commondb"
+  ],
+  "TargetServer": {
+    "ConnString": "Server=localhost;Database=DBATools;Trusted_Connection=True;",
+    "SQLDataPath": "C:\\SQL\\SQL_DATA",
+    "SQLLogPath": "C:\\SQL\\SQL_LOG",
+    "LocalBackupPath": "C:\\SQL\\SQL_BACKUP"
+  }
+}

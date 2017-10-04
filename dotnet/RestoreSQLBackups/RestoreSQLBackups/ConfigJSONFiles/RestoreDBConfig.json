@@ -1,0 +1,26 @@
+﻿{
+  "RestoreBackupsFromPath": "\\\\lpvmdata\\WebDevData\\Data\\NachiM",
+  "DatabasesToRestore": [
+    "Assets",
+    "CommonDB",
+    "Products"
+  ],
+  "PostRestore": {
+    "CleanupTables": true,
+    "CleanupProcName": "dbo.usp_TruncateTableDBTest2_PostRestore",
+    "ShrinkDB": true,
+    "RestoreUserAccess": true,
+    "UsersToRestore": [
+      "Assets:ALL_USERS",
+      "CommonDB:ALL_SQL_USERS",
+      "Products:ALL_SQL_USERS"
+    ],
+    "DeleteLocalCopy": true
+  },
+  "TargetServer": {
+    "ConnString": "Server=localhost;Database=DBATools;Trusted_Connection=True;",
+    "SQLDataPath": "C:\\SQL\\SQL_DATA",
+    "SQLLogPath": "C:\\SQL\\SQL_LOG",
+    "LocalBackupPath": "C:\\SQL\\SQL_BACKUP"
+  }
+}
