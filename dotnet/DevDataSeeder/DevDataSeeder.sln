@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSeeder.Export.Console", "CommandLine\DataSeeder.Export.Console\DataSeeder.Export.Console.csproj", "{BA4D1AAC-46E8-438C-9445-07759D23E863}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSeeder.Export.Library", "Library\DataSeeder.Export.Lib\DataSeeder.Export.Library.csproj", "{2D715E86-DB45-4B62-A863-B3C9BADDA9DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSeeder.Export.UI", "UI\DataSeeder.Export.UI\DataSeeder.Export.UI.csproj", "{B5227323-FEAF-4AE0-8003-869E0E478F57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{72BC5DCF-3A4B-477D-8E36-B7B4AE2F3B5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommandLine", "CommandLine", "{2A130848-E468-4E67-A441-7C067C16AED5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestHarnessUI", "TestHarnessUI", "{2ACFA13D-6AEB-4CFC-8A27-E044E262EF06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Keys", "Keys", "{391D3BFD-AFD9-49C3-A3A3-C33440107512}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{AA47BFCF-D5B8-4457-A05F-5075EF0E7F0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Export.Common.Library", "Common\Common.Library\Export.Common.Library.csproj", "{CCCBB9AF-763B-4E25-8783-83F3F8D0DF3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA4D1AAC-46E8-438C-9445-07759D23E863}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA4D1AAC-46E8-438C-9445-07759D23E863}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA4D1AAC-46E8-438C-9445-07759D23E863}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA4D1AAC-46E8-438C-9445-07759D23E863}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D715E86-DB45-4B62-A863-B3C9BADDA9DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D715E86-DB45-4B62-A863-B3C9BADDA9DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D715E86-DB45-4B62-A863-B3C9BADDA9DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D715E86-DB45-4B62-A863-B3C9BADDA9DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5227323-FEAF-4AE0-8003-869E0E478F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5227323-FEAF-4AE0-8003-869E0E478F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5227323-FEAF-4AE0-8003-869E0E478F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5227323-FEAF-4AE0-8003-869E0E478F57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCCBB9AF-763B-4E25-8783-83F3F8D0DF3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCCBB9AF-763B-4E25-8783-83F3F8D0DF3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCCBB9AF-763B-4E25-8783-83F3F8D0DF3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCCBB9AF-763B-4E25-8783-83F3F8D0DF3A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BA4D1AAC-46E8-438C-9445-07759D23E863} = {2A130848-E468-4E67-A441-7C067C16AED5}
+		{2D715E86-DB45-4B62-A863-B3C9BADDA9DA} = {72BC5DCF-3A4B-477D-8E36-B7B4AE2F3B5F}
+		{B5227323-FEAF-4AE0-8003-869E0E478F57} = {2ACFA13D-6AEB-4CFC-8A27-E044E262EF06}
+		{CCCBB9AF-763B-4E25-8783-83F3F8D0DF3A} = {AA47BFCF-D5B8-4457-A05F-5075EF0E7F0D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F81FDDA-352F-4E6D-8380-773E105A9BF6}
+	EndGlobalSection
+EndGlobal
